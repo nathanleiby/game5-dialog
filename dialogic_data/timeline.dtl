@@ -1,0 +1,35 @@
+[background path="res://assets/backgroudns/dialogic_factory.png"]
+
+Join nate 4
+nate (exited): Hello and welcome to[portrait=confused]...[pause=0.5] Wait? What is this?
+
+Join steph (happy) 1
+steph: Well, this is is the example timeline.
+
+nate: I thought this was a cool new feature?
+
+steph: Nah, sorry.
+
+nate (sad): It's okay.
+
+# Some choices jump back to this
+label WhatAbout
+
+nate (default): So what should this example be about?
+- How to bake cookies
+    steph (confused): Wait that hasn't to do with dialogic?!
+    jump WhatAbout
+
+- How to reach the moon [if {Player.Name} == "NASA"]
+    nate (angry): NASA! It's you again. This is for making dialogs!\
+    Please ask someone else about the moon!.
+
+    jump WhatAbout
+
+- How to write timelines in text format
+    nate: Oh, well it's pretty intuitive.[pause= 0.2][portrait=questioning] I hope.
+
+    steph: Let's hope it's easy as well.
+
+[end_timeline]
+
